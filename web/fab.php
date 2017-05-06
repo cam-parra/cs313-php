@@ -4,6 +4,5 @@
       <i class="large material-icons">shopping_cart</i>
     </a>
     <ul>
-
     </ul>
   </div>

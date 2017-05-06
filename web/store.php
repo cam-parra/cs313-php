@@ -6,7 +6,7 @@
 
   ?>
 
-    <div class="container center-align">
+    <div class="container center">
       <?php
       require 'title.php';
       require 'grid.php';

@@ -1,5 +1,5 @@
 
-<div class="row center-align">
+<div class="row valign-wrapper">
   <?php
 
   class Product
@@ -16,7 +16,7 @@
           $this->pname = $name;
       }
       public function setIname($image)
-      {  
+      {
           # code...
           $this->iname = $image;
       }
@@ -30,14 +30,25 @@
           # code...
       return $this->iname;
       }
+
+      public function display()
+      {
+        $first= "<figure class=\"ink-image bottom-space\">\n<img src=\"img/";
+        //url name
+        $second="\" class=\"imagequery\">\n<figcaption class=\"over-bottom\">";
+        //caption
+        $third="</figcaption>\n</figure>";
+        echo $first, $this->iname, $second, $this->pname, "\n", $this->price;
+      }
   }
 
   $proarr = array("Blue Shirt", "White Shirt", "Red Shirt", "Yellow Shirt", "Green Shirt", "Pink Shirt", "Orange Shirt", "Teal Shirt",
-  "Black Shirt", "Grey Shirt", "Dolphin Shirt", "Honey Badger Shirt");
+  "Black Shirt", "Grey Shirt", "Dolphin Shirt", "H B Shirt");
   $urlname = array("blue.jpg", "white.jpg", "red.jpg", "yellow.jpg", "green.jpg", "pink.jpg", "orange.jpg", "teal.jpg",
    "black.jpg", "grey.jpg", "dolphin.jpg", "honeybadger.jpg");
-  $pricearr =array(10.99, 5.99, 8.99, 7.99, 8.99, 11.99, 34.99);
+  $pricearr =array(10.99, 5.99, 8.99, 7.99, 8.99, 11.99, 34.99, 67.99, 98.99, 1.89, 30.89, 90.99);
   $lenproarr = count($proarr);
+  //echo $lenproarr;
   $assignedproducts = [];
 
   for ($i=0; $i < $lenproarr; $i++) {
@@ -54,12 +65,12 @@
   //insert url
   $second = "\">";
   //insert product name
-  $third= "</div><div class=\"card-content white-text\"><span class=\"card-title blue-text text-lighten-3\">";
+  $third= "</div><div class=\"card-content grey-text text-lighten-1\"><span class=\"card-title red-text\">";
   // add your text after
   $third2 ="</span><p>";
-  $fourth = "</p></div><div class=\"card-action\"><a href=\"#\"><i class=\"material-icons\">add_shopping_cart</i>";
+  $fourth = "</p></div><div class=\"card-action\"><a href=\"#\">add to cart";
   //This is a link
-  $fifth = "</a><a href=\"#\">Buy This</a></div></div></div>";
+  $fifth = "</a></div></div></div>";
   for ($n=0; $n < $lenofa ; $n++) {
       echo $first, $first2.$assignedproducts[$n]->__printIname();
       echo $second;
