@@ -2,13 +2,13 @@
 <body>
 
 <?php
-
+require 'fheader.php';
 // default Heroku Postgres configuration URL
 $dbUrl = getenv('DATABASE_URL');
 
 if (empty($dbUrl)) {
  // example localhost configuration URL with postgres username and a database called cs313db
- $dbUrl = "postgres://postgres:password@localhost:5432/cs313db";
+ $dbUrl = "postgres://postgres:charge34@localhost:5432/testdb";
 }
 
 $dbopts = parse_url($dbUrl);
@@ -31,9 +31,9 @@ catch (PDOException $ex) {
  die();
 }
 
-foreach ($db->query('SELECT now()') as $row)
+foreach ($db->query('SELECT * FROM public.state') as $row)
 {
- print "<p>$row[0]</p>\n\n";
+ print "<p>$row[0] . $row[1]</p>\n\n";
 }
 
 ?>
