@@ -1,10 +1,15 @@
 
 .login-form {
-  width:280px;
+  width:5080px;
+}
+
+
+.signup-form{
+  width: 600px;
 }
 
 .input-field{
-  margin-top:0;
+  margin-top:100;
 }
 
 .login-form-text{
@@ -23,17 +28,9 @@
 }
 
 
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
 main {
   flex: 1 0 auto;
 }
-
-
 
 .container  {
   display: flex;
@@ -46,4 +43,19 @@ main {
 
 .container .row {
   margin: 0 auto;
+}
+
+
+
+html,
+body {
+    height: 100%;
+}
+html {
+    display: table;
+    margin: auto;
+}
+body {
+    display: table-cell;
+    vertical-align: middle;
 }
