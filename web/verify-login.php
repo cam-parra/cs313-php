@@ -18,6 +18,7 @@ $prep->execute();
 //--this will grab our result--//
 $results =  $prep->fetchColumn(4);
 
+
 if(password_verify($unhashed_brownies, $results)) {
     # print_r("it worked");
     //
@@ -25,6 +26,9 @@ if(password_verify($unhashed_brownies, $results)) {
     header('Location: map.php');
 
 } else {
+
+
+  echo "<p>User or Password DONT EXISt</p>";
 
   // echo gettype($unhashed_brownies), "\t$unhashed_brownies\n";
   // echo gettype($hashed_brownies), "\t$hashed_brownies\n";

@@ -4,6 +4,7 @@ session_start();
 require 'htmlheader.php';
 
  ?>
+
 <body style="background-image:url(./bg.jpg);background-repeat: repeat-n;background-repeat: no-repeat;
 background-position: center; ">
 
@@ -12,14 +13,14 @@ background-position: center; ">
      <form class="login-form" action="verify-login.php" method="post">
        <div class="row">
          <div class="input-field col s12 center">
-           <img src="img/export.png" alt="" class="circle responsive-img valign profile-image-login">
+           <img src="img/export.gif" alt="" class="circle responsive-img valign profile-image-login">
            <p class="center login-form-text" style="font-size: 40px;">GARAGER</p>
          </div>
        </div>
        <div class="row margin">
          <div class="input-field col s12">
            <i class="material-icons prefix">face</i>
-           <input id="username" type="text">
+           <input id="username" name="username" type="text">
            <label for="username" class="center-align">Username</label>
          </div>
        </div>

@@ -10,7 +10,7 @@ require 'postgres.php';
  $email = $_POST['email'];
  $username = $_POST['username'];
 
- $hashed_potatoes = better_crypt($_POST['password'], 10);
+ $hashed_potatoes = better_crypt($_POST['password'], 5);
  //echo "<h1>$hashed_potatoes <br /> $firstname $lastname <br /> $email</h1>";
  $query = "INSERT INTO public.user(username, first_name ,last_name, passw ,email) VALUES('$username','$firstname', '$lastname', '$hashed_potatoes', '$email')";
 

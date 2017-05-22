@@ -12,5 +12,5 @@
   <link rel="stylesheet" href="./style.min.css">
   <link rel="stylesheet" href="./page-center.css">
   <script type="text/javascript" src="jsnstuff.js"></script>
-  <title>Food N' Stuff</title>
+  <title>GARAGER</title>
 </head>
